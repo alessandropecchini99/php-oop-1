@@ -1,50 +1,27 @@
-<!-- Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
- - è definita una classe ‘Movie’
-   => all'interno della classe sono dichiarate delle variabili d'istanza    X
-   => all'interno della classe è definito un costruttore                    X
-   => all'interno della classe è definito almeno un metodo                  X
-- vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà --FATTO -->
-
 <?php
+// includo la classe principale
+include __DIR__ . '/classes/genres.php';
+include __DIR__ . '/classes/movie.php';
+include __DIR__ . '/db.php';
+?>
 
-// definisco la classe
-class Movie
-{
-    public $title = 'Title Missing';
-    public $type = 'Type Missing';
-    public $release = 'Release Missing';
+<!DOCTYPE html>
+<html lang="en">
 
-    public function allData()
-    {
-        return $this->title . ' ' . $this->type . ' ' . $this->release;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OOP-1</title>
+</head>
 
-    public function __construct($title, $type, $release)
-    {
-        $this->title = $title;
-        $this->type = $type;
-        $this->release = $release;
-    }
-}
+<body>
+    <div class="container">
+        <?php foreach ($movies as $movie) { ?>
+            <div class="card"><?= $movie->allData() ?></div>
+        <?php } ?>
+    </div>
 
-// oggetto Yes Man
-$yesMan = new Movie('Yes Man', 'Film', '2008-12-19');
-echo $yesMan->allData();
+</body>
 
-echo '<br>';
-
-// oggetto Back Mirror
-$blackMirror = new Movie('Black Mirror', 'Tv Series', '2011-12-04');
-echo $blackMirror->allData();
-
-echo '<br>';
-
-// oggetto A Classic Horror Story
-$horrorStory = new Movie('A Classic Horror Story', 'Film', '2021-07-14');
-echo $horrorStory->allData();
-
-echo '<br>';
-
-// oggetto The Playlist
-$playlist = new Movie('The Playlist', 'Tv Series', '2022-10-13');
-echo $playlist->allData();
+</html>

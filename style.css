@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(112, 112, 112);
+  height: 100vh;
+
+  font-family: "Open Sans", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: fit-content;
+}
+
+.card {
+  text-align: center;
+  font-size: 1.5em;
+
+  padding: 30px 80px;
+  margin: 30px;
+
+  background-color: rgb(27, 27, 27);
+  color: white;
+  border-radius: 20px;
+}
