@@ -1,10 +1,12 @@
 <?php
 // includo la classe principale
-include __DIR__ . '/classes/genres.php';
 include __DIR__ . '/classes/movie.php';
+include __DIR__ . '/classes/genres.php';
 include __DIR__ . '/db.php';
 ?>
 
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +17,16 @@ include __DIR__ . '/db.php';
     <title>OOP-1</title>
 </head>
 
+
 <body>
     <div class="container">
+
+        <!-- inserisco i dati -->
         <?php foreach ($movies as $movie) { ?>
             <div class="card"><?= $movie->allData() ?></div>
         <?php } ?>
-    </div>
 
+    </div>
 </body>
 
 </html>

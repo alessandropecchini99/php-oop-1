@@ -1,5 +1,6 @@
 <?php
 
+// array generi
 $genres = [
     1 => "Comedy",
     2 => "Romance",
@@ -10,6 +11,7 @@ $genres = [
     7 => "Drama",
 ];
 
+// array film / serie tv
 $movies = [
     new Movie(
         'Yes Man',

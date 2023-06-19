@@ -17,6 +17,7 @@ class Movie
         $this->type = $type;
         $this->release = $release;
         $this->director = $director;
+        // controllo i dati generi
         foreach ($genres as $genre) {
             if (!$genre instanceof Genre) {
                 die('I generi devono essere di tipo address');
@@ -25,7 +26,7 @@ class Movie
         $this->genres = $genres;
     }
 
-    // metodo
+    // metodo per richiamare i dati in pagina
     public function allData()
     {
         $allGenre = implode(', ', $this->genres);
